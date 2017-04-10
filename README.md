@@ -33,4 +33,33 @@ Templater it's a PHP templater system that allows you to separate the php enviro
       ```
         echo Templater::inflate($scope, 'template.tpl');
       ```
-4. Have fun :)
+4. Make the tpl file using the special tags
+      ```
+    <!doctype html>
+    <html>
+      <head>
+        <title>Template</title>
+      </head>
+      <body>
+        <h3>Variable</h3>
+        {% variable1 %}
+
+        <hr>
+        <h3>Hash</h3>
+        {% variable2.name %}
+
+        <hr>
+        <h3>Array numeric index</h3>
+        {% array1.0 %} {% array1.1 %} {% array1.2 %}
+
+        <hr>
+        <h3>Array foreach</h3>
+        <ul>
+          {% for menu in voce %}
+            <li><a href="{% voce.url %}">{% voce.text %}</a></li>
+          {% end %}
+        </ul>
+      </body>
+    </html>
+      ```
+5. Have fun :)

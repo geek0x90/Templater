@@ -70,7 +70,8 @@
                   $code = str_replace($tag, $scopevar[(int) $var[1]], $code);
                 }
                 else {
-                  $code = str_replace($tag, $scopevar[$var[1]], $code);
+                  $varvalue = is_object($scopevar) ? $scopevar->$var[1] : $scopevar[$var[1]];
+                  $code = str_replace($tag, $varvalue, $code);
                 }
               }
             }

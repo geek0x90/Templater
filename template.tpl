@@ -19,7 +19,15 @@
     <h3>Array foreach</h3>
     <ul>
       {% for menu in voce %}
-        <li><a href="{% voce.url %}">{% voce.text %}</a></li>
+        <li><b>{% _ %}</b> <a href="{% voce.url %}">{% voce.text %}</a></li>
+      {% end %}
+    </ul>
+
+    <hr>
+    <h3>For</h3>
+    <ul>
+      {% for 3 to 8 %}
+        <li><b>{% _ %}</b></li>
       {% end %}
     </ul>
   </body>
